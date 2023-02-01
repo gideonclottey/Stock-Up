@@ -15,9 +15,23 @@
       <ul class="nav justify-content-end">
         <li class="nav-item">
           <img src="" class="rounded float-left" alt="">
-          <a class="nav-link active" href="#">Sign Up!</a>
+          <a class="nav-link active" href="#modal">Sign Up!</a>
         </li>
       </ul>
+      <div id="modal" class="modal-dialog modal-dialog-centered">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </header>
     <main>
       <div class="container">
