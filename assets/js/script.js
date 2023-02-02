@@ -5,7 +5,7 @@ const popUp = $("#signupModal")
 const signUpForm = $("#signUpForm")
 
 // Add on click event to signup link
-$(document).on('click', '#signUp', function (event) {
+$(document).on('click', '#sign-up', function (event) {
 
     // Prevent default functionality 
     event.preventDefault()
