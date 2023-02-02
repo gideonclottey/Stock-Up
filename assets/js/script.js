@@ -45,3 +45,6 @@ function clearFormValues(){
     // clear the email input field
     $("#email").val('')
 }
+
+// Saving name in local storage
+
