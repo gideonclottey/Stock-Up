@@ -26,6 +26,8 @@ $("#signUpForm").submit(function (event) {
 
     const email = $("#email").val().trim()
 
+    localStorage.setItem("savedName", name)
+
     console.log(name, email)
 
     // hide the modal
