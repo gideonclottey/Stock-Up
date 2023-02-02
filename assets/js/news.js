@@ -18,11 +18,12 @@ $.ajax({ url: newsQuery })
 
         // Assign response to a variable
         const articles = response.articles
+        // console.log(articles)
 
 
         // Loop through each article (limited to 10 articles)
 
-        for(i = 0; i < 10; i++){
+        for(i = 0; i < 5; i++){
 
             const article = articles[i]
 
@@ -30,7 +31,7 @@ $.ajax({ url: newsQuery })
             const title = article.title
     
             //article published at date
-            const publishedAt = article.publishedAt
+            const publishedAt = todaysDate
     
             // article source
             const source = article.source.Name
@@ -41,6 +42,31 @@ $.ajax({ url: newsQuery })
             console.log(title,publishedAt,source,url)
     
             // To do article data into divs and populate index.html
+
+            // newsArticleHtml = $("<div>").addClass("news-article")
+
+            // linkHtml = $("<a>").attr("href",url)
+
+            // titleHtml = $("<h3>").text(title)
+
+            // publishedAtHtml = $("<span>").addClass("publishedAt").text(publishedAt)
+
+            // sourceHtml = $("<span>").addClass("source").text(source)
+
+            // linkHtml.append(titleHtml).append(sourceHtml).append(publishedAtHtml)
+
+            // newsArticleHtml.append(linkHtml)
+
+            const card =`
+            <div class="card">
+            <div class="card-body">
+                <a href="${url}" title="${title}" class="card-subtitle mb-2 text-muted">${title}</a>
+            </div>
+            </div>
+            `         
+            $('.sidebar').append(card)
+
+           
         }
 
 
