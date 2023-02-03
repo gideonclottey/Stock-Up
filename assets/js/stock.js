@@ -1,7 +1,7 @@
-var  companies = ['Apple','zm','GOOGL','BAC','AMS','THYAO']
+var  companies = ['Apple','zm','GOOGL','BAC','AMS','THYAO','Microsoft', 'BSE', 'RMV','EBAY']
 for(i =0; i< companies.length; i++){
 
-   
+   url_company = "https://real-time-finance-data.p.rapidapi.com/search?query="+ companies[i]
     //console.log(comp_symbol)
     var settings = {
 	
@@ -9,41 +9,43 @@ for(i =0; i< companies.length; i++){
         "async": true,
         
         "crossDomain": true,
-        "url": "https://real-time-finance-data.p.rapidapi.com/search?query="+ companies[i],
+        "url":url_company ,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "9012d869e8msha9b24fd1c904769p1eb313jsn0552cf00b53c",
+            "X-RapidAPI-Key": "bcaa042362msh1f80ce2fdd7d2adp18d8d0jsnd445af761c6f",
             "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com"
         }
     };
+
+    $.ajax(settings).done(function (response) {
+        //console.log(response.data.stock[0].price);
+        var datas =response.data.stock
+        for(i =0; i < 10; i++){
+            const data = datas[i]
+    
+           // console.log(data)
+    
+            
+            var  stock =$('<tr>');
+            var stock_head = $('<th>')
+                stock_head.text(data.symbol)
+            var name = $('<th>')
+                name.text(data.name)
+            var price = $('<th>')
+                price.text(data.price)
+                
+            var change = $('<th>')
+                change.text(data.change)
+            var change_percentage = $('<th>')
+                change_percentage.text(data.change_percent)
+          
+            $(stock).append(stock_head,name,price,change,change_percentage) 
+            $('#stock-container').append(stock)   
+            
+    
+        }
+    
+    });
 }
 
 
-$.ajax(settings).done(function (response) {
-	//console.log(response.data.stock[0].price);
-    var datas =response.data.stock
-    for(i =0; i < 10; i++){
-        const data = datas[i]
-
-        console.log(data)
-
-        
-        var  stock =$('<tr>');
-        var stock_head = $('<th>')
-            stock_head.text(data.symbol)
-        var name = $('<th>')
-            name.text(data.name)
-        var price = $('<th>')
-            price.text(data.price)
-        var change = $('<th>')
-            change.text(data.change)
-        var change_percentage = $('<th>')
-            change_percentage.text(data.change_percent)
-      
-        $(stock).append(stock_head,name,change,change_percentage) 
-        $('#stock-container').append(stock)   
-        
-
-    }
-
-});
