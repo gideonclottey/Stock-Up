@@ -6,6 +6,18 @@ main {
     height: 87vh;
 }
 
+.dark main {
+    background-color: rgb(24, 23, 23);
+}
+
+.dark .sidebar {
+    color: white;
+}
+
+.dark header, .dark footer {
+    background-color: #0f0c1a;
+}
+
 #logo {
     height: 60px;
     width:100px;
@@ -19,7 +31,7 @@ header {
     justify-content: space-between;
 }
 
-#sign-up {
+#sign-up, .welcomeBanner {
     color: white;
 }
 
