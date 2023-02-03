@@ -4,6 +4,14 @@ const popUp = $("#signupModal")
 // Assign variable to Sign up form
 const signUpForm = $("#signUpForm")
 
+const savedName = JSON.parse(localStorage.getItem("savedName"));
+console.log(typeof savedName)
+if (savedName) {
+    $(".welcomeBanner").text("Welcome, " + savedName + "!")
+} else {
+    $(".welcomeBanner").text("")
+}
+
 // Add on click event to signup link
 $(document).on('click', '#sign-up', function (event) {
 
@@ -26,7 +34,7 @@ $("#signUpForm").submit(function (event) {
 
     const email = $("#email").val().trim()
 
-    localStorage.setItem("savedName", name)
+    localStorage.setItem("savedName", JSON.stringify(name))
 
     console.log(name, email)
 
@@ -35,6 +43,8 @@ $("#signUpForm").submit(function (event) {
 
     // clear form values
     clearFormValues()
+
+    location.reload();
 });
 
 
@@ -47,3 +57,4 @@ function clearFormValues(){
     // clear the email input field
     $("#email").val('')
 }
+
