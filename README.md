@@ -22,6 +22,6 @@ User is given the option to sign up to regular updates via a sign up form which 
 The user’s name is stored to local storage after they sign up, and their name is displayed with a welcome message when the page is refreshed.
 The page should be responsive to screen size.
 
-Link to the deployed app:
+Link to the deployed app: https://ionachadwick97.github.io/Stock-Up/
 
 Screenshots: 
