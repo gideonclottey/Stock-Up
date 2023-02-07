@@ -25,7 +25,7 @@ for(i =0; i< companies.length; i++){
     
            // console.log(data)
     
-            
+            // populating the tables
             var  stock =$('<tr>');
             var stock_head = $('<th>')
                 stock_head.text(data.symbol)
