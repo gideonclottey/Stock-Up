@@ -26,6 +26,7 @@ Link to the deployed app: https://ionachadwick97.github.io/Stock-Up/
 
 Screenshots: 
 
+To be noted: the APIs have a very limited number of uses, but provided these are not used up the app is functional.
 
 ## Credits
 
