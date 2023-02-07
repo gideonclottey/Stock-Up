@@ -58,14 +58,12 @@ function clearFormValues(){
     $("#email").val('')
 }
 
-
- 	
-
 $(function() {
     // light/dark theme
     const theme = $(".theme")
     
     theme.on("click", function() {
         $("body").toggleClass("dark")
+        $("#stocks-table").toggleClass("table-dark")
     })
   });

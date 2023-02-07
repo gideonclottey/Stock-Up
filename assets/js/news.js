@@ -60,7 +60,7 @@ $.ajax({ url: newsQuery })
             const card =`
             <div class="card">
             <div class="card-body">
-                <a href="${url}" title="${title}" class="card-subtitle mb-2 text-muted">${title}</a>
+                <a href="${url}" title="${title}" class="card-subtitle mb-2">${title}</a>
             </div>
             </div>
             `         

@@ -2,7 +2,7 @@
 }
 
 main {
-    background-color: #a0a4b1;
+    background-color:rgb(218 226 227);
     height: 87vh;
 }
 
@@ -15,7 +15,19 @@ main {
 }
 
 .dark header, .dark footer {
-    background-color: #0f0c1a;
+    background-color: #100c1ed9;
+}
+
+.dark .card {
+    background-color: #212529;
+}
+
+.dark a {
+    color: white;
+}
+
+a {
+    color: black;
 }
 
 #logo {
