@@ -27,7 +27,7 @@ Link to the deployed app: https://ionachadwick97.github.io/Stock-Up/
 Screenshots: 
 
 
-##Credits
+## Credits
 
 https://github.com/gurdeep-ninja
 
