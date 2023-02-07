@@ -12,7 +12,7 @@ for(i =0; i< companies.length; i++){
         "url":url_company ,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "bcaa042362msh1f80ce2fdd7d2adp18d8d0jsnd445af761c6f",
+            "X-RapidAPI-Key": "317333b245mshaaea7a29dbaa05fp11e523jsn32cd12653339",
             "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com"
         }
     };
@@ -37,7 +37,9 @@ for(i =0; i< companies.length; i++){
             var change = $('<th>')
                 change.text(data.change)
             var change_percentage = $('<th>')
-                change_percentage.text(data.change_percent)
+                 cange_percentage.text(data.change_percent + "%")
+
+               
           
             $(stock).append(stock_head,name,price,change,change_percentage) 
             $('#stock-container').append(stock)   
