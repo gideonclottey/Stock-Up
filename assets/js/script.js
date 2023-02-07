@@ -7,7 +7,7 @@ const signUpForm = $("#signUpForm")
 const savedName = JSON.parse(localStorage.getItem("savedName"));
 console.log(typeof savedName)
 if (savedName) {
-    $(".welcomeBanner").text("Welcome, " + savedName + "!")
+    $(".welcomeBanner").text("Welcome " + savedName + "!")
 } else {
     $(".welcomeBanner").text("")
 }

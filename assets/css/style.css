@@ -35,6 +35,11 @@ header {
     color: white;
 }
 
+.welcomeBanner {
+	font-size: 1.30rem;
+	margin: 0;
+}
+
 .table {
     padding-top: 50px;
     padding-bottom: 100px;
