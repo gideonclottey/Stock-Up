@@ -62,4 +62,5 @@ function clearFormValues(){
 
 $(".theme").on("click", function() {
     $("body").toggleClass("dark")
+    $("#stocks-table").toggleClass("table-dark")
 })
