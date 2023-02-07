@@ -77,3 +77,15 @@ footer {
 
 }
 
+.theme {
+    font-size:1.5rem
+}
+
+.theme::before {
+	content: "\f186";
+}
+
+.dark .theme::before {
+	content: "\f185";
+    color:white
+}
