@@ -30,6 +30,8 @@ Screenshots:
 ##Credits
 
 https://github.com/gurdeep-ninja
+
 https://github.com/gideonclottey
+
 https://github.com/ionachadwick97
 
