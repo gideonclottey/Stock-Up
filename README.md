@@ -25,3 +25,13 @@ The page should be responsive to screen size.
 Link to the deployed app: https://ionachadwick97.github.io/Stock-Up/
 
 Screenshots: 
+
+
+##Credits
+
+https://github.com/gurdeep-ninja
+
+https://github.com/gideonclottey
+
+https://github.com/ionachadwick97
+
