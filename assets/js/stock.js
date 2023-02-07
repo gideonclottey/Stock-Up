@@ -37,7 +37,7 @@ for(i =0; i< companies.length; i++){
             var change = $('<th>')
                 change.text(data.change)
             var change_percentage = $('<th>')
-                 cange_percentage.text(data.change_percent + "%")
+                 change_percentage.text(data.change_percent + "%")
 
                
           
