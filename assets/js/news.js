@@ -1,18 +1,21 @@
-// Api Key for https://newsapi.org/
-const apikeyNews = "47328f24169e434d909823fe9a078274"
-
 // Get todays date
-const todaysDate = moment().format("YYYY-MM-DD")
+//2022-08-21T16:27:09Z
+const todaysDate = moment().format("YYYY-MM-DD") + "T00:00:00Z"
 
 // the search query we want to limit results to
 const query = "stocks"
 
-// Query for fetching news - includes query, todays & apikeyNews as paramater
-const newsQuery = "https://newsapi.org/v2/everything?q=" + query + "&language=en&from=" + todaysDate + "&sortBy=publishedAt&apiKey=" + apikeyNews
+const apikeyNews = "12d4365847ac1850ce1069c699fd99d3"
+
+var apiURL = "https://gnews.io/api/v4/search?";
+
+var key = "&from="+todaysDate+"&country=us&max=5&token=" + apikeyNews;
+
+queryURL = apiURL + "q=" + query + key;
 
 
 // jQuery ajax call to newsQuerymend point
-$.ajax({ url: newsQuery })
+$.ajax({ url: queryURL })
     // once ajax response received
     .then(function (response) {
 
@@ -23,23 +26,15 @@ $.ajax({ url: newsQuery })
 
         // Loop through each article (limited to 10 articles)
 
-        for(i = 0; i < 5; i++){
+        for(i = 0; i < articles.length; i++){
 
             const article = articles[i]
 
             // article title
             const title = article.title
-    
-            //article published at date
-            const publishedAt = todaysDate
-    
-            // article source
-            const source = article.source.Name
-    
+  
             //article url
-            const url = article.url
-    
-            console.log(title,publishedAt,source,url)
+            const url = article.ur
     
             // To do article data into divs and populate index.html
 
