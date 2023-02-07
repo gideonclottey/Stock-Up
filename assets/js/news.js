@@ -1,5 +1,5 @@
 // Api Key for https://newsapi.org/
-const apikeyNews = "7e6515af5a014be4a6520f4c0cb2bc68"
+const apikeyNews = "47328f24169e434d909823fe9a078274"
 
 // Get todays date
 const todaysDate = moment().format("YYYY-MM-DD")

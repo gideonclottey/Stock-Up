@@ -12,7 +12,7 @@ for(i =0; i< companies.length; i++){
         "url":url_company ,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "328b721fffmshbc7f5fc3d69d297p1900c6jsna35605c9753b",
+            "X-RapidAPI-Key": "f2ec9b90b0msh96ed109310d09fcp1824d5jsn974dcbfb9d67",
             "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com"
         }
     };
