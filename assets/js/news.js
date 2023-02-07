@@ -8,7 +8,7 @@ const todaysDate = moment().format("YYYY-MM-DD")
 const query = "stocks"
 
 // Query for fetching news - includes query, todays & apikeyNews as paramater
-const newsQuery = "https://newsapi.org/v2/everything?q=" + query + "&from=" + todaysDate + "&sortBy=publishedAt&apiKey=" + apikeyNews
+const newsQuery = "https://newsapi.org/v2/everything?q=" + query + "&language=en&from=" + todaysDate + "&sortBy=publishedAt&apiKey=" + apikeyNews
 
 
 // jQuery ajax call to newsQuerymend point

@@ -89,3 +89,18 @@ footer {
 	content: "\f185";
     color:white
 }
+
+@media (max-width:1200px) {
+    .h2, h2 {
+        font-size: 1rem;
+        font-weight:700
+    }
+    .card-subtitle {
+        font-size:.7rem;
+        margin-bottom:2px
+    }
+
+    .sidebar .card:last-child{
+        display:none
+    }
+}
