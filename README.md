@@ -35,8 +35,6 @@ Screenshots:
 ![Screenshot (14)](https://user-images.githubusercontent.com/117356506/217616363-5b522fa3-639a-4458-9bab-97783cb14142.png)
 
 
-To be noted: the APIs have a very limited number of uses, but provided these are not used up the app is functional.
-
 ## Credits
 
 https://github.com/gurdeep-ninja
