@@ -34,7 +34,7 @@ $.ajax({ url: queryURL })
             const title = article.title
   
             //article url
-            const url = article.ur
+            const url = article.url
     
             // To do article data into divs and populate index.html
 
