@@ -10,7 +10,7 @@ As an investor, I want to see information on the latest stock trends and the lat
 
 ### Acceptance Criteria
 When the application is opened, an up to date list of stocks and relevant information is displayed in a table.
-Relevant news headlines and thumbnails are displayed in a sidebar.
+Relevant news headlines and are displayed in a sidebar.
 When the user views the list of stocks, they are presented with:
 * Stock symbol
 * Price
