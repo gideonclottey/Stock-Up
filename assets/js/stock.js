@@ -1,53 +1,45 @@
-var  companies = ['Apple','zm','GOOGL','BAC','AMS','THYAO','Microsoft', 'BSE', 'RMV','EBAY']
-for(i =0; i< companies.length; i++){
 
-   url_company = "https://real-time-finance-data.p.rapidapi.com/search?query="+ companies[i]
-    //console.log(comp_symbol)
-    var settings = {
-	
+// Stock symbols of selected companies 
+const companies = ['AAPL','ZM','GOOGL','BAC','AMS','THYAO','MSFT', 'BSE', 'RMV','EBAY']
+// Api key 
+const apiKey ="ec2cd61e7ac30ef1c56bff8eeda288e8"
 
-        "async": true,
+// Query url parthern
+url_company = "https://financialmodelingprep.com/api/v3/quote/"+ companies.join()+"?apikey="+apiKey
+
+// jQuery ajax call to newsQuerymend point
+$.ajax({ url: url_company })
+    // once ajax response received
+    .then(function (response) {
+        //console.log(response)
+    
+        var datas = response
+       
+            // Looping through the response
+
+            for (i = 0; i < datas.length; i++){
+                const data = datas[i]
         
-        "crossDomain": true,
-        "url":url_company ,
-        "method": "GET",
-        "headers": {
-            "X-RapidAPI-Key": "f2ec9b90b0msh96ed109310d09fcp1824d5jsn974dcbfb9d67",
-            "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com"
-        }
-    };
+                var stock =$('<tr>');
+                var stock_head = $('<td>')
+                    stock_head.text(data.symbol)
+                var name = $('<td>')
+                    name.text(data.name)
+                var price = $('<td>')
+                    price.text(data.price.toFixed(2))
+                    
+                var change = $('<td>')
+                    change.text(data.change.toFixed(2))
+                var change_percentage = $('<td>')
+                     change_percentage.text(data.changesPercentage.toFixed(2) + "%")
+        
+    
+                $(stock).append(stock_head,name,price,change_percentage,change) 
 
-    $.ajax(settings).done(function (response) {
-        //console.log(response.data.stock[0].price);
-        var datas =response.data.stock
-        for(i =0; i < 10; i++){
-            const data = datas[i]
-    
-           // console.log(data)
-    
-            
-            var  stock =$('<tr>');
-            var stock_head = $('<th>')
-                stock_head.text(data.symbol)
-            var name = $('<th>')
-                name.text(data.name)
-            var price = $('<th>')
-                price.text(data.price)
-                
-            var change = $('<th>')
-                change.text(data.change)
-            var change_percentage = $('<th>')
-                 change_percentage.text(data.change_percent + "%")
+                $('#stock-container').append(stock)   
+            }
+    })
 
-               
-          
-            $(stock).append(stock_head,name,price,change_percentage,change) 
-            $('#stock-container').append(stock)   
-            
-    
-        }
-    
-    });
-}
 
+        
 
