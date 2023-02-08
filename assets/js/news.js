@@ -5,12 +5,15 @@ const todaysDate = moment().format("YYYY-MM-DD") + "T00:00:00Z"
 // the search query we want to limit results to
 const query = "stocks"
 
+// Api  key
 const apikeyNews = "12d4365847ac1850ce1069c699fd99d3"
 
-var apiURL = "https://gnews.io/api/v4/search?";
+// api endpoint for gnews earch
+var apiURL = "https://gnews.io/api/v4/search?"
 
 var key = "&from="+todaysDate+"&country=us&max=5&token=" + apikeyNews;
 
+// Create queryurl for ajax request
 queryURL = apiURL + "q=" + query + key;
 
 
@@ -36,33 +39,17 @@ $.ajax({ url: queryURL })
             //article url
             const url = article.url
     
-            // To do article data into divs and populate index.html
-
-            // newsArticleHtml = $("<div>").addClass("news-article")
-
-            // linkHtml = $("<a>").attr("href",url)
-
-            // titleHtml = $("<h3>").text(title)
-
-            // publishedAtHtml = $("<span>").addClass("publishedAt").text(publishedAt)
-
-            // sourceHtml = $("<span>").addClass("source").text(source)
-
-            // linkHtml.append(titleHtml).append(sourceHtml).append(publishedAtHtml)
-
-            // newsArticleHtml.append(linkHtml)
-
+            // Format html for each Bootstrap card for the news articles
             const card =`
             <div class="card">
             <div class="card-body">
                 <a href="${url}" title="${title}" class="card-subtitle mb-2">${title}</a>
             </div>
             </div>
-            `         
+            `
+            // Append the card to the sidebar
             $('.sidebar').append(card)
-
            
         }
-
 
     })
