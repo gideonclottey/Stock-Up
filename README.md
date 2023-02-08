@@ -11,15 +11,20 @@ As an investor, I want to see information on the latest stock trends and the lat
 ### Acceptance Criteria
 When the application is opened, an up to date list of stocks and relevant information is displayed in a table.
 Relevant news headlines and are displayed in a sidebar.
+
 When the user views the list of stocks, they are presented with:
 * Stock symbol
 * Price
 * Changes (%)
 * Changes (value)
+
 When the user views the news sidebar, they are presented with:
 * Headlines, which link out to the featured article
+
 User is given the option to sign up to regular updates via a sign up form which is shown via Bootstrap modal when a “Sign Up” button is clicked.
+
 The user’s name is stored to local storage after they sign up, and their name is displayed with a welcome message when the page is refreshed.
+
 The page should be responsive to screen size.
 
 Link to the deployed app: https://ionachadwick97.github.io/Stock-Up/
